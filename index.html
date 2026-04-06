@@ -30,10 +30,10 @@ Click to enter
     <div class="prof-wrap">
     <div class="prof">
         
-        <img src="kal.jpg" alt="Мышь в ребусе" class="mysz">
+        <img src="byb.jpg" alt="Мышь в ребусе" class="mysz">
         <div class="overlay2"></div>
-        <h1>Мышь в ребусе</h1>
-        <p>мышь которая в ребусе попавшая через запятую в наш мир со слоном в конце</p>
+        <h1>Тихий_Гость#добряк</h1>
+        <p>The best raider of Wroclawia & Magnolia</p>
         <div class="views">
 👁 <span id="viewCount">0</span>
 </div>
@@ -166,6 +166,23 @@ window.addEventListener("load", animateTitle);
     });
 
     card.addEventListener("mouseleave", () => {
+        tgtX = 0;
+        tgtY = 0;
+        hovered = false;
+    });
+
+    // тач — 3D эффект пальцем
+    card.addEventListener("touchmove", (e) => {
+        const touch = e.touches[0];
+        const r = card.getBoundingClientRect();
+        const nx = (touch.clientX - r.left) / r.width  * 2 - 1;
+        const ny = (touch.clientY - r.top)  / r.height * 2 - 1;
+        tgtX = -ny * MAX_TILT;
+        tgtY =  nx * MAX_TILT;
+        hovered = true;
+    }, { passive: true });
+
+    card.addEventListener("touchend", () => {
         tgtX = 0;
         tgtY = 0;
         hovered = false;

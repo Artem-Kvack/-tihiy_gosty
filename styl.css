@@ -173,3 +173,45 @@ cursor:pointer;
 
 z-index:999;
 }
+
+/* === адаптивность === */
+
+/* планшеты */
+@media (max-width: 768px) {
+  .prof {
+    width: min(420px, calc(100vw - 40px));
+    padding: 30px;
+  }
+  .volume-control input {
+    width: 130px;
+  }
+}
+
+/* телефоны */
+@media (max-width: 480px) {
+  .prof {
+    width: calc(100vw - 32px);
+    padding: 24px 20px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .mysz {
+    width: 72px;
+    height: 72px;
+  }
+  .volume-control {
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+  }
+  .volume-control input {
+    width: 110px;
+  }
+  #enter {
+    font-size: 28px;
+  }
+}
