@@ -10,7 +10,7 @@ user-select:none;
 -moz-user-select:none;
 }
 
-/* видео фон */
+
 #bg-video{
 position:fixed;
 top:0;
@@ -21,7 +21,7 @@ object-fit:cover;
 z-index:-2;
 }
 
-/* затемнение */
+
 .overlay{
 position:fixed;
 top:0;
@@ -32,7 +32,7 @@ background:rgba(0,0,0,0.7);
 z-index:-1;
 }
 
-/* враппер — чистое CSS центрирование, никогда не трогается JS */
+
 .prof-wrap{
 position:fixed;
 top:50%;
@@ -41,7 +41,7 @@ transform:translate(-50%,-50%);
 perspective:900px;
 }
 
-/* центральный профиль */
+
 .prof{
 position:relative;
 text-align:center;
@@ -64,7 +64,7 @@ will-change: transform;
 animation: jelly-glow 4s ease-in-out infinite;
 }
 
-/* глянцевый блик сверху — эффект водяного пузыря */
+
 .prof::before{
 content:'';
 position:absolute;
@@ -82,7 +82,7 @@ background: linear-gradient(
 pointer-events:none;
 }
 
-/* пульс свечения — дышащий эффект */
+
 @keyframes jelly-glow{
 0%, 100%{
 box-shadow:
@@ -102,7 +102,7 @@ box-shadow:
 }
 }
 
-/* аватарка */
+
 .mysz{
 width:90px;
 height:90px;
@@ -112,10 +112,10 @@ border: 2px solid rgba(255, 255, 255, 0.12);
 box-shadow: 0 0 20px rgba(0, 0, 0, 0.70), 0 0 6px rgba(255,255,255,0.08);
 }
 
-/* логотип */
 
 
-/* текст */
+
+
 h1{
 font-size:22px;
 margin:10px 0;
@@ -127,7 +127,7 @@ font-size:14px;
 opacity:0.65;
 color: rgba(220,220,225,0.90);
 }
-/* плеер */
+
 .volume-control{
 position:fixed;
 top:20px;
@@ -196,14 +196,14 @@ cursor:pointer;
 z-index:999;
 }
 
-/* счётчик просмотров */
+
 .views{
 margin-top:10px;
 opacity:0.5;
 font-size:13px;
 }
 
-/* секция любимых игр */
+
 .fav-games{
 margin-top:20px;
 border-top:1px solid rgba(255,255,255,0.08);
@@ -274,9 +274,9 @@ color:rgba(220,220,225,0.80);
 letter-spacing:0.04em;
 }
 
-/* === адаптивность === */
 
-/* планшеты */
+
+
 @media (max-width: 768px) {
   .prof {
     width: min(420px, calc(100vw - 40px));
@@ -287,7 +287,7 @@ letter-spacing:0.04em;
   }
 }
 
-/* телефоны */
+
 @media (max-width: 480px) {
   .prof {
     width: calc(100vw - 32px);
